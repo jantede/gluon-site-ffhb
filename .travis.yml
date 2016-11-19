@@ -1,0 +1,7 @@
+language: generic
+git:
+  depth: 1
+before_install:
+  - sudo apt-get install coreutils build-essential subversion git libncurses5-dev zlib1g-dev unzip gawk libssl-dev
+script: 
+  - ./build.sh testing
