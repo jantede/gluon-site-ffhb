@@ -98,8 +98,7 @@ if ! $cont; then
     local_version=1
   fi
   auto_determined_release="${GLUON_TAG}+${LOCAL_SUFFIX}${local_version}"
-  read -p "Release name for this build [default: ${auto_determined_release}]: " GLUON_RELEASE
-  GLUON_RELEASE="${GLUON_RELEASE:-$auto_determined_release}"
+  GLUON_RELEASE="${auto_determined_release}"
 
   cat > "$statefile" <<EOF
 GLUON_TAG="${GLUON_TAG}"
